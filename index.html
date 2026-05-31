@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>리필링크 - 퇴근길에 만나는 동네 마감</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Nanum+Myeongjo:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="site-header is-top" id="siteHeader" role="banner">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="리필링크 홈">
+        <img src="https://www.figma.com/api/mcp/asset/c59a2375-e000-4bea-8904-2f87f0da3f37" alt="리필링크 로고" class="logo__img" width="40" height="40">
+        <span class="logo__text">리필링크</span>
+      </a>
+      <nav class="gnb" aria-label="주요 메뉴">
+        <a href="#about" class="gnb__link">서비스소개</a>
+        <a href="#" class="btn btn--primary">앱 바로보기</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+
+    <!-- HERO: 스크롤 3단계 영상 확대 -->
+    <section class="hero-scroll" id="heroScroll" aria-labelledby="hero-title">
+      <div class="hero-scroll__wrap" id="heroWrap">
+        <div class="hero-scroll__viewport" id="heroPin">
+          <div class="hero-scroll__stage" id="heroStage">
+            <div class="hero__intro" id="heroIntro">
+              <div class="hero__text">
+                <p class="hero__subtitle">퇴근길에 만나는 <br class="hero__br">동네 마감</p>
+                <h1 class="hero__title" id="hero-title">리필링크</h1>
+              </div>
+            </div>
+          </div>
+          <div class="hero__video-shell" id="heroVideoShell">
+            <video
+              src="re.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              id="heroVideo"
+              aria-label="리필링크 소개 영상"
+            ></video>
+            <div class="hero__dim" aria-hidden="true"></div>
+            <div class="hero__copies" id="heroCopies" aria-live="polite">
+              <blockquote class="hero__copy is-active">
+                <p>퇴근길, 익숙한 거리</p>
+                <p>불 켜진 가게들이 보입니다</p>
+              </blockquote>
+              <blockquote class="hero__copy">
+                <p>하루를 마친 가게 안에는</p>
+                <p>아직 남은 음식이 있습니다</p>
+              </blockquote>
+              <blockquote class="hero__copy">
+                <p>버려지기 전의 오늘을</p>
+                <p>리필링크가 연결합니다</p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="hero-scroll__spacer" id="heroSpacer" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT: 스크롤 시 opacity 10% → 100% -->
+    <section class="about" id="about">
+      <div class="about__inner">
+        <div class="about__text" id="aboutText">
+          <p class="about__line about__line--emph">리필링크는 버려지는 마감 재고에 주목합니다.</p>
+          <p class="about__line about__line--dim">매일 저녁, 팔리지 못한 음식들이 조용히 폐기됩니다. 점주는 오늘도 손해를 감수하고, 근처 소비자는 그 사실을 알지 못한 채 편의점으로 향하지요. 할인 정보는 인스타그램과 SNS에 파편화되어 있고, 찾으려 해도 쉽지 않습니다.</p>
+          <p class="about__line about__line--emph">리필링크는 마감 재고를 실시간으로 등록하고, 퇴근길 소비자에게 정확하게 연결합니다.</p>
+          <p class="about__line about__line--dim">거래가 쌓일수록 예측이 정교해지고, 예측이 정교해질수록 더 많은 음식이 살아남습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO STRIP: 왼쪽 무한 롤링 -->
+    <section class="photo-strip" aria-hidden="true">
+      <div class="photo-strip__track">
+        <ul class="photo-strip__list photo-strip__marquee">
+          <li><img src="images/photo-strip/photo-1.png" alt="" class="photo-strip__img photo-strip__img--short" width="305" height="300" loading="eager" decoding="async"></li>
+          <li><img src="images/photo-strip/photo-2.png" alt="" class="photo-strip__img photo-strip__img--tall" width="305" height="410" loading="eager" decoding="async"></li>
+          <li><img src="images/photo-strip/photo-3.png" alt="" class="photo-strip__img photo-strip__img--short" width="305" height="300" loading="eager" decoding="async"></li>
+          <li><img src="images/photo-strip/photo-4.png" alt="" class="photo-strip__img photo-strip__img--tall" width="305" height="410" loading="eager" decoding="async"></li>
+          <li><img src="images/photo-strip/photo-5.png" alt="" class="photo-strip__img photo-strip__img--short" width="305" height="300" loading="lazy" decoding="async"></li>
+          <li><img src="images/photo-strip/photo-6.png" alt="" class="photo-strip__img photo-strip__img--tall" width="305" height="410" loading="lazy" decoding="async"></li>
+          <li><img src="images/photo-strip/photo-7.png" alt="" class="photo-strip__img photo-strip__img--short" width="305" height="300" loading="lazy" decoding="async"></li>
+          <li><img src="images/photo-strip/photo-8.png" alt="" class="photo-strip__img photo-strip__img--tall" width="305" height="410" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/photo-strip/photo-1.png" alt="" class="photo-strip__img photo-strip__img--short" width="305" height="300" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/photo-strip/photo-2.png" alt="" class="photo-strip__img photo-strip__img--tall" width="305" height="410" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/photo-strip/photo-3.png" alt="" class="photo-strip__img photo-strip__img--short" width="305" height="300" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/photo-strip/photo-4.png" alt="" class="photo-strip__img photo-strip__img--tall" width="305" height="410" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/photo-strip/photo-5.png" alt="" class="photo-strip__img photo-strip__img--short" width="305" height="300" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/photo-strip/photo-6.png" alt="" class="photo-strip__img photo-strip__img--tall" width="305" height="410" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/photo-strip/photo-7.png" alt="" class="photo-strip__img photo-strip__img--short" width="305" height="300" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/photo-strip/photo-8.png" alt="" class="photo-strip__img photo-strip__img--tall" width="305" height="410" loading="lazy" decoding="async"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS: 오른쪽 카드 위로 무한 롤링 -->
+    <section class="testimonials" aria-labelledby="testi-title">
+      <div class="testimonials__inner">
+        <div class="testimonials__lead">
+          <p class="section-label">가게 사장님들의 한마디</p>
+          <h2 class="section-title" id="testi-title">매일 수많은 음식이<br>버려지고 있습니다</h2>
+          <p class="section-desc">버려지는 음식은 매일 반복되는 손실입니다.<br>남은 음식은 처리 비용과 재고 부담으로 이어집니다.<br>하지만 이를 연결할 마감딜 플랫폼은 아직 부족합니다.</p>
+        </div>
+        <div class="testi-roll">
+          <div class="testi-roll__viewport">
+            <ul class="testi-list">
+              <li class="testi-card">
+                <span class="testi-card__quote" aria-hidden="true">"</span>
+                <blockquote class="testi-card__body">매일 저녁 8시 이후 <em>김밥 40줄이 남아요.</em> 버리기 아깝지만 홍보할 여유가 없어요.</blockquote>
+                <footer class="testi-card__author">
+                  <img src="https://www.figma.com/api/mcp/asset/31583a76-35bd-498d-af8f-d4f173cc4e94" alt="" class="testi-card__avatar" width="42" height="42">
+                  <div><p class="testi-card__name">김성준</p><p class="testi-card__role">마포구 김밥집 8년차</p></div>
+                </footer>
+              </li>
+              <li class="testi-card testi-card--green">
+                <span class="testi-card__quote" aria-hidden="true">"</span>
+                <blockquote class="testi-card__body">샐러드는 신선도가 중요해서 다음 날로 넘기기 어려워요. <em>팔리지 않으면 그대로 폐기할 수밖에 없어요.</em></blockquote>
+                <footer class="testi-card__author">
+                  <img src="https://www.figma.com/api/mcp/asset/e4ea42da-9001-46d2-8b02-8b114d961406" alt="" class="testi-card__avatar" width="50" height="50">
+                  <div><p class="testi-card__name">이서연</p><p class="testi-card__role">망원동 샐러드 가게 3년차</p></div>
+                </footer>
+              </li>
+              <li class="testi-card">
+                <span class="testi-card__quote" aria-hidden="true">"</span>
+                <blockquote class="testi-card__body">저녁마다 도시락이 몇 개씩 남는데, <em>버릴 때마다 재료비가 그대로 사라지는 기분</em>이에요.</blockquote>
+                <footer class="testi-card__author">
+                  <img src="https://www.figma.com/api/mcp/asset/f31743d8-386e-4f6d-9148-ff50bd72dc5b" alt="" class="testi-card__avatar" width="50" height="50">
+                  <div><p class="testi-card__name">최민재</p><p class="testi-card__role">연남동 도시락집 6년차</p></div>
+                </footer>
+              </li>
+              <li class="testi-card testi-card--cream">
+                <span class="testi-card__quote" aria-hidden="true">"</span>
+                <blockquote class="testi-card__body"><em>마감 할인이라도 하고 싶은데 알릴 방법이 마땅치 않아요.</em> 결국 단골 몇 명에게만 말하고 끝나요.</blockquote>
+                <footer class="testi-card__author">
+                  <img src="https://www.figma.com/api/mcp/asset/ed94dbfc-7de4-4a9b-ac35-7a24ffa56ecc" alt="" class="testi-card__avatar" width="50" height="50">
+                  <div><p class="testi-card__name">김도윤</p><p class="testi-card__role">상수동 브런치 카페 7년차</p></div>
+                </footer>
+              </li>
+              <li class="testi-card">
+                <span class="testi-card__quote" aria-hidden="true">"</span>
+                <blockquote class="testi-card__body">음식을 버리는 것도 아깝지만 처리 비용도 만만치 않아요. <em>남은 음식이 줄어들 방법이 있었으면 좋겠어요.</em></blockquote>
+                <footer class="testi-card__author">
+                  <img src="https://www.figma.com/api/mcp/asset/fb7dfcbe-0538-4979-8085-d305bd42f256" alt="" class="testi-card__avatar" width="50" height="50">
+                  <div><p class="testi-card__name">오유진</p><p class="testi-card__role">공덕동 반찬가게 9년차</p></div>
+                </footer>
+              </li>
+              <!-- 무한 롤링 복제 -->
+              <li class="testi-card" aria-hidden="true">
+                <span class="testi-card__quote" aria-hidden="true">"</span>
+                <blockquote class="testi-card__body">매일 저녁 8시 이후 <em>김밥 40줄이 남아요.</em> 버리기 아깝지만 홍보할 여유가 없어요.</blockquote>
+                <footer class="testi-card__author">
+                  <img src="https://www.figma.com/api/mcp/asset/31583a76-35bd-498d-af8f-d4f173cc4e94" alt="" class="testi-card__avatar" width="42" height="42">
+                  <div><p class="testi-card__name">김성준</p><p class="testi-card__role">마포구 김밥집 8년차</p></div>
+                </footer>
+              </li>
+              <li class="testi-card testi-card--green" aria-hidden="true">
+                <span class="testi-card__quote" aria-hidden="true">"</span>
+                <blockquote class="testi-card__body">샐러드는 신선도가 중요해서 다음 날로 넘기기 어려워요. <em>팔리지 않으면 그대로 폐기할 수밖에 없어요.</em></blockquote>
+                <footer class="testi-card__author">
+                  <img src="https://www.figma.com/api/mcp/asset/e4ea42da-9001-46d2-8b02-8b114d961406" alt="" class="testi-card__avatar" width="50" height="50">
+                  <div><p class="testi-card__name">이서연</p><p class="testi-card__role">망원동 샐러드 가게 3년차</p></div>
+                </footer>
+              </li>
+              <li class="testi-card" aria-hidden="true">
+                <span class="testi-card__quote" aria-hidden="true">"</span>
+                <blockquote class="testi-card__body">저녁마다 도시락이 몇 개씩 남는데, <em>버릴 때마다 재료비가 그대로 사라지는 기분</em>이에요.</blockquote>
+                <footer class="testi-card__author">
+                  <img src="https://www.figma.com/api/mcp/asset/f31743d8-386e-4f6d-9148-ff50bd72dc5b" alt="" class="testi-card__avatar" width="50" height="50">
+                  <div><p class="testi-card__name">최민재</p><p class="testi-card__role">연남동 도시락집 6년차</p></div>
+                </footer>
+              </li>
+              <li class="testi-card testi-card--cream" aria-hidden="true">
+                <span class="testi-card__quote" aria-hidden="true">"</span>
+                <blockquote class="testi-card__body"><em>마감 할인이라도 하고 싶은데 알릴 방법이 마땅치 않아요.</em> 결국 단골 몇 명에게만 말하고 끝나요.</blockquote>
+                <footer class="testi-card__author">
+                  <img src="https://www.figma.com/api/mcp/asset/ed94dbfc-7de4-4a9b-ac35-7a24ffa56ecc" alt="" class="testi-card__avatar" width="50" height="50">
+                  <div><p class="testi-card__name">김도윤</p><p class="testi-card__role">상수동 브런치 카페 7년차</p></div>
+                </footer>
+              </li>
+              <li class="testi-card" aria-hidden="true">
+                <span class="testi-card__quote" aria-hidden="true">"</span>
+                <blockquote class="testi-card__body">음식을 버리는 것도 아깝지만 처리 비용도 만만치 않아요. <em>남은 음식이 줄어들 방법이 있었으면 좋겠어요.</em></blockquote>
+                <footer class="testi-card__author">
+                  <img src="https://www.figma.com/api/mcp/asset/fb7dfcbe-0538-4979-8085-d305bd42f256" alt="" class="testi-card__avatar" width="50" height="50">
+                  <div><p class="testi-card__name">오유진</p><p class="testi-card__role">공덕동 반찬가게 9년차</p></div>
+                </footer>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" aria-labelledby="features-title">
+      <div class="features__inner">
+        <div class="features__head">
+          <p class="section-label">리필링크가 전하는 제안</p>
+          <h2 class="section-title" id="features-title">가게의 남은 음식을 누군가의<br class="features-title__br features-title__br--tablet" aria-hidden="true">든든한 한 끼로</h2>
+        </div>
+        <ul class="features__grid">
+          <li class="feature-card">
+            <div class="feature-card__text">
+              <h3 class="feature-card__title">1. 마감 예측 시스템</h3>
+              <p class="feature-card__desc">"이 가게 내일 80% 확률로 마감딜 뜸" 누적 거래 데이터 기반 예측으로 소비자를 미리 움직이게 만듭니다.</p>
+            </div>
+            <figure class="feature-card__phone" aria-hidden="true">
+              <img src="https://www.figma.com/api/mcp/asset/34605f88-297f-4ec6-8df8-a143b3b906a8" alt="">
+            </figure>
+          </li>
+          <li class="feature-card">
+            <div class="feature-card__text">
+              <h3 class="feature-card__title">2. 지도 + 퇴근길 루트</h3>
+              <p class="feature-card__desc">위치 기반 마감딜 지도와 퇴근 경로 필터. 카운트다운 타이머로 긴박감을 더해 구매 전환율을 끌어올립니다.</p>
+            </div>
+            <figure class="feature-card__phone" aria-hidden="true">
+              <img src="https://www.figma.com/api/mcp/asset/560123eb-96d7-44ab-8189-7948c8c036ca" alt="">
+            </figure>
+          </li>
+          <li class="feature-card">
+            <div class="feature-card__text">
+              <h3 class="feature-card__title">3. 선결제 → QR 픽업</h3>
+              <p class="feature-card__desc">앱 선결제 후 QR 코드 하나로 픽업 완료. 마찰 없는 구매 플로우로 노쇼를 줄이고 점주 신뢰도를 높입니다.</p>
+            </div>
+            <figure class="feature-card__phone" aria-hidden="true">
+              <img src="https://www.figma.com/api/mcp/asset/0cd1223a-6a48-45cf-91b1-19e90f4c0fd4" alt="">
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WORLD -->
+    <section class="world" aria-labelledby="world-title">
+      <div class="world__inner">
+        <div class="world__head">
+          <p class="section-label">리필링크와 함께하는 세상</p>
+          <h2 class="section-title" id="world-title">남은 음식 한 끼에<br class="world-title__br"> 동네가 함께 이어지는 세상</h2>
+        </div>
+        <figure class="world__image" aria-hidden="true">
+          <video
+            class="world__video"
+            id="worldVideo"
+            src="images/world/world-pc.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            aria-label="리필링크와 함께하는 세상 일러스트"
+          ></video>
+          <picture class="world__picture">
+            <source media="(max-width: 480px)" srcset="images/world/world-mobile.png">
+            <source media="(max-width: 800px)" srcset="images/world/world-tablet.png">
+            <img
+              src="images/world/world-pc.png"
+              alt="리필링크와 함께하는 세상 일러스트"
+              width="1024"
+              height="560"
+              loading="lazy"
+              decoding="async"
+            >
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <!-- STORIES -->
+    <section class="stories" aria-labelledby="stories-title">
+      <div class="stories__inner">
+        <div class="stories__lead">
+          <p class="section-label">현장의 목소리</p>
+          <h2 class="section-title" id="stories-title">리필링크가<br>필요한 이유</h2>
+          <p class="section-desc">버려지는 음식은 매일 반복되는 손실입니다.<br>남은 음식은 처리 비용과 재고 부담으로 이어집니다.<br>하지만 이를 연결할 마감딜 플랫폼은 아직 부족합니다.</p>
+        </div>
+        <ul class="story-list">
+          <li class="story-card">
+            <figure class="story-card__thumb"><img src="https://www.figma.com/api/mcp/asset/2cf88614-fbce-4487-9f7f-73471a6235c8" alt=""></figure>
+            <div class="story-card__body">
+              <div><h3 class="story-card__title">오늘의 남은 음식, 누군가의 한 끼</h3><p class="story-card__desc">가게의 부담은 줄이고, 소비자에게는 합리적인 선택을 전합니다.</p></div>
+              <p class="story-card__link">매장 운영자</p>
+            </div>
+          </li>
+          <li class="story-card">
+            <figure class="story-card__thumb"><img src="https://www.figma.com/api/mcp/asset/c452d259-44f0-4fef-b85c-54b8dbaaa61e" alt=""></figure>
+            <div class="story-card__body">
+              <div><h3 class="story-card__title">남은 음식의 새로운 기회</h3><p class="story-card__desc">버려지기 전의 음식을 필요한 손님과 이어줍니다.</p></div>
+              <p class="story-card__link">매장 운영자</p>
+            </div>
+          </li>
+          <li class="story-card">
+            <figure class="story-card__thumb"><img src="https://www.figma.com/api/mcp/asset/0bcad359-1fbd-4c64-82c1-d2b942f5d993" alt=""></figure>
+            <div class="story-card__body">
+              <div><h3 class="story-card__title">동네를 잇는 따뜻한 순환</h3><p class="story-card__desc">버려질 음식을 필요한 사람에게 연결해 더 나은 소비를 만듭니다.</p></div>
+              <a href="#" class="story-card__link">동네 이야기</a>
+            </div>
+          </li>
+          <li class="story-card">
+            <figure class="story-card__thumb"><img src="https://www.figma.com/api/mcp/asset/dae2fbd8-a9d3-41fd-af2b-bc03987fd7dd" alt=""></figure>
+            <div class="story-card__body">
+              <div><h3 class="story-card__title">작은 구매가 만드는 변화</h3><p class="story-card__desc">한 번의 선택이 음식물 쓰레기를 줄이는 실천으로 이어집니다.</p></div>
+              <a href="#" class="story-card__link">환경 이야기</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BANNER: 왼쪽 무한 롤링 -->
+    <section class="banner" aria-labelledby="banner-title">
+      <div class="banner__inner">
+        <p class="section-label">낭비를 줄이는 다양한 방법</p>
+        <h2 class="section-title" id="banner-title">리필링크가 도움이 되는 곳</h2>
+        <div class="banner-roll">
+          <div class="banner-roll__viewport">
+            <ul class="banner-list">
+              <li class="banner-card">
+                <div class="banner-card__top">
+                  <span class="banner-card__label banner-card__label--blue">사장님 가이드</span>
+                  <span class="banner-card__icon banner-card__icon--blue"><img src="images/banner/owner-store.png" alt=""></span>
+                </div>
+                <p class="banner-card__title">가게의 마감 손실,<br>이렇게 줄여요.</p>
+              </li>
+              <li class="banner-card">
+                <div class="banner-card__top">
+                  <span class="banner-card__label banner-card__label--yellow">소비자 이야기</span>
+                  <span class="banner-card__icon banner-card__icon--yellow"><img src="images/banner/consumer-bag.png" alt=""></span>
+                </div>
+                <p class="banner-card__title">퇴근길에 음식을<br>사면 생기는 일</p>
+              </li>
+              <li class="banner-card">
+                <div class="banner-card__top">
+                  <span class="banner-card__label banner-card__label--green">환경정보</span>
+                  <span class="banner-card__icon banner-card__icon--green"><img src="images/banner/environment-earth.png" alt=""></span>
+                </div>
+                <p class="banner-card__title">버려지는 음식이<br>환경에 미치는 영향</p>
+              </li>
+              <li class="banner-card">
+                <div class="banner-card__top">
+                  <span class="banner-card__label banner-card__label--purple">지원안내</span>
+                  <span class="banner-card__icon banner-card__icon--purple"><img src="images/banner/support-building.png" alt=""></span>
+                </div>
+                <p class="banner-card__title">소상공인을 위한<br>정부 지원 정보</p>
+              </li>
+              <li class="banner-card">
+                <div class="banner-card__top">
+                  <span class="banner-card__label banner-card__label--red">팀 소개</span>
+                  <span class="banner-card__icon banner-card__icon--red"><img src="images/banner/team-heart.png" alt=""></span>
+                </div>
+                <p class="banner-card__title">리필링크는 어떤<br>팀일까요?</p>
+              </li>
+              <!-- 무한 롤링 복제 -->
+              <li class="banner-card" aria-hidden="true">
+                <div class="banner-card__top">
+                  <span class="banner-card__label banner-card__label--blue">사장님 가이드</span>
+                  <span class="banner-card__icon banner-card__icon--blue"><img src="images/banner/owner-store.png" alt=""></span>
+                </div>
+                <p class="banner-card__title">가게의 마감 손실,<br>이렇게 줄여요.</p>
+              </li>
+              <li class="banner-card" aria-hidden="true">
+                <div class="banner-card__top">
+                  <span class="banner-card__label banner-card__label--yellow">소비자 이야기</span>
+                  <span class="banner-card__icon banner-card__icon--yellow"><img src="images/banner/consumer-bag.png" alt=""></span>
+                </div>
+                <p class="banner-card__title">퇴근길에 음식을<br>사면 생기는 일</p>
+              </li>
+              <li class="banner-card" aria-hidden="true">
+                <div class="banner-card__top">
+                  <span class="banner-card__label banner-card__label--green">환경정보</span>
+                  <span class="banner-card__icon banner-card__icon--green"><img src="images/banner/environment-earth.png" alt=""></span>
+                </div>
+                <p class="banner-card__title">버려지는 음식이<br>환경에 미치는 영향</p>
+              </li>
+              <li class="banner-card" aria-hidden="true">
+                <div class="banner-card__top">
+                  <span class="banner-card__label banner-card__label--purple">지원안내</span>
+                  <span class="banner-card__icon banner-card__icon--purple"><img src="images/banner/support-building.png" alt=""></span>
+                </div>
+                <p class="banner-card__title">소상공인을 위한<br>정부 지원 정보</p>
+              </li>
+              <li class="banner-card" aria-hidden="true">
+                <div class="banner-card__top">
+                  <span class="banner-card__label banner-card__label--red">팀 소개</span>
+                  <span class="banner-card__icon banner-card__icon--red"><img src="images/banner/team-heart.png" alt=""></span>
+                </div>
+                <p class="banner-card__title">리필링크는 어떤<br>팀일까요?</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer__inner">
+      <p class="footer__brand">리필링크</p>
+      <p class="footer__copy">© 2026 리필링크. 퇴근길을 더 맛있게.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="js/main.js?v=12"></script>
+</body>
+</html>

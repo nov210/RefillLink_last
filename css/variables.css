@@ -1,0 +1,95 @@
+/* variables.css — 피그마 디자인 토큰 */
+@font-face {
+  font-family: 'Ria';
+  src: url('https://cdn.jsdelivr.net/gh/fontbee/font@main/LOTTE/RiaSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ria';
+  src: url('https://cdn.jsdelivr.net/gh/fontbee/font@main/LOTTE/RiaSans-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ria';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/RiaSans-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-green-primary:  #2e6a4f;
+  --color-green-dark:     #1b3c2c;
+  --color-green-accent:   #00845f;
+  --color-green-light:    #d5f3e5;
+  --color-green-lighter:  #e5fbe2;
+  --color-green-pale:     #e8fbeb;
+
+  --color-yellow-bg:      #fff6e3;
+  --color-yellow-text:    #5c4006;
+
+  --color-purple-bg:      #f7f1ff;
+  --color-purple-text:    #512d81;
+
+  --color-red-bg:         #fff1f1;
+  --color-red-text:       #b92323;
+
+  --color-blue-text:      #0f6abf;
+  --color-blue-bg:        #e1f0ff;
+  --color-gold-text:      #a97300;
+  --color-env-text:       #268a19;
+  --color-purple-label:   #7848b7;
+  --color-red-label:      #d2200e;
+  --color-red-icon-bg:    #ffebeb;
+
+  --color-pink:           #ffb9b9;
+
+  --color-text-dark:      #222;
+  --color-text-mid:       #444;
+  --color-text-light:     #888;
+  --color-text-faint:     #bbb;
+  --color-text-placeholder: #919191;
+
+  --color-border:         #dfdfdf;
+  --color-border-card:    rgba(0, 0, 0, 0.1);
+
+  --color-bg-cream:       #faf8f2;
+  --color-bg-feature:     rgba(0, 0, 0, 0.05);
+
+  --font-pretendard: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-myeongjo:   'Nanum Myeongjo', serif;
+  --font-pen:        'Nanum Pen Script', cursive;
+  --font-ria:        'Ria', var(--font-pretendard);
+
+  --spacing-xs:   8px;
+  --spacing-sm:  16px;
+  --spacing-md:  24px;
+  --spacing-lg:  32px;
+  --spacing-xl:  40px;
+  --spacing-2xl: 60px;
+  --spacing-3xl: 80px;
+  --spacing-4xl: 100px;
+
+  --radius-sm:   8px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-xl:  20px;
+  --radius-2xl: 32px;
+  --radius-3xl: 60px;
+  --radius-full: 9999px;
+
+  --shadow-phone: 0 0 4.4px rgba(0,0,0,0.06), 0 5px 19px rgba(0,0,0,0.08);
+
+  --max-width-desktop: 1280px;
+  --max-width-content: 1154px;
+  --max-width-tablet:   800px;
+  --max-width-mobile:   375px;
+
+  --transition-base: 0.2s ease;
+}

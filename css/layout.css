@@ -1,0 +1,552 @@
+/* layout.css — 섹션 구조 & 레이아웃 (피그마 Desktop 기준) */
+
+.section-label {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-green-primary);
+  margin-bottom: 15px;
+  line-height: 1;
+}
+
+.section-title {
+  font-family: var(--font-ria);
+  font-size: 46px;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.section-desc {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text-light);
+  line-height: 1.4;
+}
+
+/* HEADER */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 200;
+  height: 64px;
+  background: transparent;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.site-header.is-top {
+  background-color: #fff;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.site-header.is-top .logo__text {
+  color: var(--color-green-dark);
+}
+
+.site-header.is-top .gnb__link {
+  color: #000;
+}
+
+.site-header.is-glass {
+  background-color: rgba(255, 255, 255, 0.42);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* 흰 섹션 위 — 글래스 유지, 높이 64px 그대로 */
+.site-header.is-glass:not(.is-over-video) {
+  background-color: rgba(255, 255, 255, 0.78);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.03);
+}
+
+.site-header.is-glass .logo__text,
+.site-header.is-glass .gnb__link {
+  color: var(--color-text-dark);
+}
+
+.site-header.is-glass .logo__text,
+.site-header.is-dark .logo__text {
+  font-family: var(--font-ria);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.site-header.is-glass.is-over-video {
+  background-color: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.site-header.is-glass.is-over-video .logo__text,
+.site-header.is-glass.is-over-video .gnb__link {
+  color: #fff;
+}
+
+.site-header.is-glass.is-over-video .logo__text {
+  font-family: var(--font-ria);
+  font-weight: 600;
+}
+
+.site-header.is-glass.is-over-video .btn--primary {
+  background: #fff;
+  color: var(--color-green-primary);
+}
+
+.site-header.is-dark {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+}
+
+.site-header.is-dark .logo__text,
+.site-header.is-dark .gnb__link {
+  color: #fff;
+}
+
+.site-header.is-dark .btn--primary {
+  background: #fff;
+  color: var(--color-green-primary);
+}
+
+.site-header.is-glass:not(.is-over-video) .btn--primary {
+  background: var(--color-green-primary);
+  color: #fff;
+}
+
+.site-header.is-glass .logo__img,
+.site-header.is-dark .logo__img {
+  width: 32px;
+  height: 32px;
+}
+
+.site-header.is-glass .btn--primary,
+.site-header.is-dark .btn--primary {
+  padding: 10px 14px;
+  font-size: 15px;
+}
+
+.header-inner {
+  max-width: var(--max-width-desktop);
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* HERO — 당근 about 패턴: 100vh 고정 레이어 + 스크롤 스페이서 */
+.hero-scroll {
+  position: relative;
+  max-width: 100%;
+}
+
+.hero-scroll__wrap {
+  position: relative;
+}
+
+.hero-scroll__viewport {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+.hero-scroll:not(.is-layout-ready) .hero__video-shell {
+  visibility: hidden;
+}
+
+.hero-scroll.is-layout-ready .hero__video-shell {
+  visibility: visible;
+}
+
+.hero-scroll.is-at-start .hero-scroll__viewport {
+  background: #fff;
+}
+
+.hero-scroll.is-at-start .hero__video-shell {
+  clip-path: var(--hero-start-clip) !important;
+}
+
+.hero-scroll.is-at-start .hero__intro {
+  opacity: 1 !important;
+}
+
+.hero-scroll__spacer {
+  height: 1000px;
+  pointer-events: none;
+}
+
+.hero-scroll__viewport.is-hero-expanded {
+  background: #000;
+}
+
+.hero-scroll__stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  pointer-events: none;
+  padding: 64px 24px 0;
+  box-sizing: border-box;
+}
+
+.hero__intro {
+  width: 100%;
+  max-width: calc(100vw - 48px);
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.hero__text {
+  padding: 48px 0 0;
+}
+
+.hero__video-shell {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background: #000;
+  will-change: clip-path;
+}
+
+.hero__video-shell.is-expanded {
+  z-index: 4;
+}
+
+.hero__video-shell video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.hero__dim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.55) 100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-scroll__viewport.is-copies-on .hero__dim,
+.hero__video-shell.is-copies-on .hero__dim {
+  opacity: 1;
+}
+
+.hero__copies {
+  position: absolute;
+  left: 136px;
+  right: auto;
+  bottom: 88px;
+  z-index: 5;
+  display: grid;
+  width: min(720px, calc(100vw - 272px));
+  min-width: 0;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  text-align: left;
+}
+
+.hero-scroll__viewport.is-copies-on .hero__copies,
+.hero__video-shell.is-copies-on .hero__copies {
+  visibility: visible;
+}
+
+.hero__copy {
+  grid-area: 1 / 1;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: none;
+  font-family: var(--font-ria);
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: #fff;
+  text-align: left;
+  white-space: normal;
+  word-break: keep-all;
+  text-shadow: 0 2px 32px rgba(0, 0, 0, 0.45);
+}
+
+.hero__copy p {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+.hero-scroll__viewport.is-copies-on .hero__copy.is-active,
+.hero__video-shell.is-copies-on .hero__copy.is-active {
+  visibility: visible;
+  z-index: 1;
+}
+
+.hero-scroll__stage,
+.hero__intro {
+  will-change: opacity;
+}
+
+/* ABOUT — 초기 opacity 10% (JS에서 스크롤 연동) */
+.about {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+.about__inner {
+  max-width: var(--max-width-desktop);
+  width: 100%;
+  padding: 80px 50px;
+}
+
+.about__text {
+  opacity: 0.1;
+}
+
+/* PHOTO STRIP — 왼쪽 무한 롤링 */
+.photo-strip {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  padding: 40px 0;
+  background: #fff;
+}
+
+.photo-strip__track {
+  overflow: hidden;
+}
+
+.photo-strip__list {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: max-content;
+}
+
+.photo-strip__marquee {
+  animation: photo-strip-scroll 40s linear infinite;
+  animation-play-state: running;
+  will-change: transform;
+}
+
+.photo-strip__list > li {
+  flex: 0 0 305px;
+  width: 305px;
+  line-height: 0;
+}
+
+@keyframes photo-strip-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+.testimonials__inner {
+  max-width: var(--max-width-desktop);
+  width: 100%;
+  display: flex;
+  gap: 100px;
+  align-items: flex-start;
+  padding: 180px 80px;
+  box-sizing: border-box;
+}
+
+.testimonials__lead {
+  position: sticky;
+  top: 120px;
+  width: 417px;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.testimonials__inner > .testi-roll {
+  width: 548px;
+  flex-shrink: 0;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: center;
+}
+
+.features__inner {
+  max-width: var(--max-width-content);
+  width: 100%;
+  padding: var(--spacing-4xl) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+/* WORLD */
+.world {
+  display: flex;
+  justify-content: center;
+}
+
+.world__inner {
+  max-width: var(--max-width-desktop);
+  width: 100%;
+  padding: var(--spacing-4xl) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.world__head {
+  padding: 0 60px;
+}
+
+/* STORIES */
+.stories {
+  display: flex;
+  justify-content: center;
+}
+
+.stories__inner {
+  max-width: var(--max-width-desktop);
+  width: min(100%, var(--max-width-desktop));
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 150px 80px 200px;
+  box-sizing: border-box;
+}
+
+.stories__lead {
+  width: 417px;
+  flex-shrink: 0;
+}
+
+/* BANNER */
+.banner {
+  background: var(--color-bg-cream);
+}
+
+.banner__inner {
+  max-width: var(--max-width-desktop);
+  margin: 0 auto;
+  padding: var(--spacing-3xl) 60px;
+  overflow: hidden;
+}
+
+.banner__inner .section-title {
+  margin-bottom: 0;
+}
+
+.banner__inner .banner-roll {
+  margin-top: 24px;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #e0e0e0;
+}
+
+.footer__inner {
+  max-width: var(--max-width-desktop);
+  margin: 0 auto;
+  padding: 28px 64px;
+}
+
+/* PC only */
+@media (min-width: 801px) {
+  .hero-scroll__stage {
+    padding: 88px 64px 0;
+  }
+
+  .hero__intro {
+    width: min(1000px, calc(100vw - 128px));
+    max-width: 100%;
+  }
+
+  .hero__text {
+    padding: 44px 24px 0 136px;
+  }
+
+  /* components.css(54px)보다 우선 — PC만 64px */
+  .hero-scroll .hero__intro .hero__subtitle,
+  .hero-scroll .hero__intro .hero__title {
+    font-size: 64px;
+    letter-spacing: -0.27px;
+    line-height: 1.2;
+  }
+
+  .hero-scroll .hero__intro .hero__title {
+    margin-top: 8px;
+  }
+
+  .hero-scroll .hero__copy,
+  .hero-scroll .hero__copy p {
+    font-size: clamp(56px, 4.8vw, 64px);
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+  }
+
+  .hero__copies {
+    width: calc(100vw - 136px);
+    max-width: 960px;
+  }
+
+  .hero-scroll .hero__copy p {
+    white-space: nowrap;
+  }
+}
